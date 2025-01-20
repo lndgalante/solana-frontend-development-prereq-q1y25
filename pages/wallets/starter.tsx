@@ -4,11 +4,11 @@ import { useConnection } from "@solana/wallet-adapter-react";
 import { useWallet } from "@solana/wallet-adapter-react";
 
 // internals
-import { BoilerPlate } from "../../components/BoilerPlate";
+import { Wallets } from "../../components/Wallets";
 import type { Status } from "../../lib/types";
 
 export default function Starter() {
-	// react hoooks
+	// react hooks
 	const [balance, setBalance] = useState<number>(0);
 	const [status, setStatus] = useState<Status>("idle");
 
@@ -38,5 +38,5 @@ export default function Starter() {
 		}
 	}, [connection, publicKey]);
 
-	return <BoilerPlate status={status} balance={balance} />;
+	return <Wallets status={status} balance={balance} />;
 }

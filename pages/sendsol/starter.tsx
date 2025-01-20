@@ -1,7 +1,7 @@
-import BoilerPlate from '../../components/BoilerPlate';
+import { SendSol } from "../../components/SendSol";
 
-const Starter = () => (
-    <BoilerPlate />
-)
+const Starter = () => {
+	return <SendSol />;
+};
 
 export default Starter;

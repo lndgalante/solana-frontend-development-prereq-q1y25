@@ -7,7 +7,7 @@ type Props = {
 	balance: number;
 };
 
-export function BoilerPlate({ status, balance }: Props) {
+export function Wallets({ status, balance }: Props) {
 	return (
 		<main className="container py-12 mx-auto text-zinc-50">
 			<h1 className="text-4xl font-bold">Wallet Starter</h1>
