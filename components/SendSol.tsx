@@ -1,3 +1,5 @@
+"use client";
+
 import { web3 } from "@coral-xyz/anchor";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useConnection } from "@solana/wallet-adapter-react";
