@@ -5,9 +5,13 @@ import {
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import * as walletAdapterWallets from "@solana/wallet-adapter-wallets";
 import * as web3 from "@solana/web3.js";
-require("@solana/wallet-adapter-react-ui/styles.css");
 
-const WalletContextProvider = ({ children }) => {
+// styles
+import "@solana/wallet-adapter-react-ui/styles.css";
+
+export function WalletContextProvider({
+	children,
+}: { children: React.ReactNode }) {
 	const endpoint = web3.clusterApiUrl("devnet");
 	const wallets = [new walletAdapterWallets.PhantomWalletAdapter()];
 
@@ -18,6 +22,4 @@ const WalletContextProvider = ({ children }) => {
 			</WalletProvider>
 		</ConnectionProvider>
 	);
-};
-
-export default WalletContextProvider;
+}
